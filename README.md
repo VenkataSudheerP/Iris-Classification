@@ -1,5 +1,4 @@
 # Iris-Classification
-# IrisClassifer-WebApp
 
 ## Overview
 This web application is designed to classify iris flowers using a machine learning model. Users can input the sepal length, sepal width, petal length, and petal width of an iris flower, and the app will predict the iris species based on the trained model.
@@ -23,12 +22,12 @@ This web application is designed to classify iris flowers using a machine learni
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/
+   git clone https://github.com/VenkataSudheerP/Iris-Classification
 
 2. Navigate to the project directory:
 
    ```bash
-   cd 
+   cd Iris-Classification
 
 3. Install dependencies:
    

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        body {
+            background-image: url('/static/IMG/iris.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+       .container {
+            display: flex;
+            justify-content: space-around; /* Adjusted spacing */
+            align-items: center;
+            height: 100vh;
+            padding: 0 150px; /* Added padding for better spacing */
+        }
+
+       
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-image">
+               
+            </div>
+            <form class="card-form" action="{{ url_for('predict')}}" method="POST">
+                <!-- Your input fields go here -->
+                <div class="input">
+                    <input name="SepalLengthCm" type="number" step="any" class="input-field" required />
+                    <label class="input-label"> Sepal Length in cm</label>
+                </div>
+                <div class="input">
+                    <input name="SepalWidthCm" type="number" step="any" class="input-field" required />
+                    <label class="input-label">Sepal Width in cm</label>
+                </div>
+                <div class="input">
+                    <input name="PetalLengthCm" type="number" step="any" class="input-field" required />
+                    <label class="input-label">Petal Length in cm</label>
+                </div>
+                <div class="input">
+                    <input name="PetalWidthCm" type="number" step="any" class="input-field" required />
+                    <label class="input-label">Petal Width in cm</label>
+                </div>
+                <div class="action">
+                    <button type="submit" class="action-button">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Result Card -->
+        <div class="card1">
+        <center>
+         <h2 style="color: rgb(14, 32, 136); font-weight: bold; font-size: 25px;">IRIS CLASSIFIED AS</h2>
+         </center>
+        <div class="card-image-1">
+               
+            </div>
+            <center>
+                <p style="color: rgb(14, 32, 136); font-weight: bold;font-size: 25px;">{{ result }}</p>
+            </center>
+        </div>
+    </div>
+
+</body>
+
+</html>
